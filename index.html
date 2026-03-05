@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asrama Putra – SMA Katolik ST. Albertus Malang (DEMPO)</title>
+  <meta name="description" content="Asrama Putra SMA Katolik St. Albertus Malang (DEMPO) – komunitas pendampingan dan pendidikan kaum muda berlandaskan nilai Spiritualitas Karmel." />
+  <meta property="og:title" content="Asrama Putra ST. Albertus Malang" />
+  <meta property="og:description" content="Belajar, berdoa, bersaudara dan melayani segiat-giatnya untuk kemuliaan Tuhan." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ==============================   NAVIGATION   ============================== -->
+  <header id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-brand" id="nav-brand-link">
+        <img src="foto/SMADEMPO9.png"
+             onerror="this.src='https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/SMADEMPO9.png'"
+             alt="Logo SMA Katolik ST. Albertus" class="nav-logo" />
+        <div class="nav-brand-text">
+          <span class="nav-title">SMA Katolik</span>
+          <span class="nav-subtitle">ST. ALBERTUS</span>
+        </div>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="https://ppdb2025.st-albertus.sch.id/" class="nav-link">Home</a>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-link active">Asrama <i class="fa fa-chevron-down fa-xs"></i></a>
+          <div class="dropdown-panel">
+            <a href="https://ppdb2025.st-albertus.sch.id/asrama_putra" class="dropdown-item active-item">
+              <i class="fa fa-mars"></i> Asrama Putra
+            </a>
+            <a href="https://ppdb2025.st-albertus.sch.id/asrama_putri" class="dropdown-item">
+              <i class="fa fa-venus"></i> Asrama Putri
+            </a>
+          </div>
+        </div>
+        <a href="https://ppdb2025.st-albertus.sch.id/Home.html#sec-f249" class="nav-link">Prosedur</a>
+        <a href="https://ppdb2025.st-albertus.sch.id/Home.html#sec-1328" class="nav-link">Brosur</a>
+        <a href="https://ppdb2025.st-albertus.sch.id/lupa" class="nav-link nav-link-outlined">Lupa Password</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==============================   HERO SECTION   ============================== -->
+  <section class="hero" id="hero">
+    <div class="hero-slides" id="hero-slides">
+      <div class="hero-slide active" style="background-image: url('foto/IMG_1401.png'), url('https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/IMG_1401.JPG')"></div>
+      <div class="hero-slide" style="background-image: url('foto/IMG_20240830_110452.png'), url('https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/putra/IMG_20240830_110452.jpg')"></div>
+      <div class="hero-slide" style="background-image: url('foto/IMG_1386.png'), url('https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/IMG_1386.JPG')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <img src="foto/LogoAsrama.png"
+             onerror="this.src='https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/LogoAsrama.png'"
+             alt="Logo Asrama" class="hero-badge-img" />
+      </div>
+      <p class="hero-eyebrow">Yayasan Sancta Maria</p>
+      <h1 class="hero-title">Asrama Putra<br /><span class="hero-title-accent">ST. Albertus Malang</span></h1>
+      <p class="hero-motto">"Belajar, berdoa, bersaudara dan melayani segiat-giatnya untuk kemuliaan Tuhan"</p>
+      <div class="hero-cta">
+        <a href="#fasilitas" class="btn btn-primary" id="btn-explore">Jelajahi Fasilitas</a>
+        <a href="#pendaftaran" class="btn btn-outline" id="btn-daftar">Informasi Pendaftaran</a>
+      </div>
+    </div>
+
+    <div class="hero-address">
+      <i class="fa fa-location-dot"></i> Jl. Talang No. 3–5, Malang
+    </div>
+
+    <div class="hero-controls">
+      <button class="hero-dot active" id="dot-0" onclick="goToSlide(0)" aria-label="Slide 1"></button>
+      <button class="hero-dot" id="dot-1" onclick="goToSlide(1)" aria-label="Slide 2"></button>
+      <button class="hero-dot" id="dot-2" onclick="goToSlide(2)" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>Scroll ke bawah</span>
+      <i class="fa fa-chevron-down bounce"></i>
+    </div>
+  </section>
+
+  <!-- ==============================   VISI & MOTTO   ============================== -->
+  <section class="vision-section" id="visi">
+    <div class="container">
+      <div class="vision-grid">
+        <div class="vision-logo-wrapper" data-aos="fade-right">
+          <img src="foto/LogoAsrama.png"
+               onerror="this.src='https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/LogoAsrama.png'"
+               alt="Logo Asrama Putra St. Albertus" class="vision-logo" />
+          <div class="vision-logo-glow"></div>
+        </div>
+        <div class="vision-content" data-aos="fade-left">
+          <div class="section-eyebrow">Tentang Kami</div>
+          <h2 class="section-heading">Visi &amp; Motto Asrama</h2>
+          <div class="vision-motto-card">
+            <i class="fa fa-quote-left vision-quote-icon"></i>
+            <p class="vision-motto-text">
+              Belajar, berdoa, bersaudara dan melayani segiat-giatnya<br />untuk kemuliaan Tuhan.
+            </p>
+          </div>
+          <div class="vision-divider"></div>
+          <h3 class="vision-subheading">Visi Asrama Yayasan Sancta Maria</h3>
+          <p class="vision-text">
+            Komunitas pendampingan dan pendidikan kaum muda sebagai jalan transformasi diri
+            menuju pribadi yang utuh dan dewasa berlandaskan ideologi negara Pancasila
+            dan nilai-nilai Spiritualitas Karmel.
+          </p>
+          <div class="vision-badges">
+            <span class="badge"><i class="fa fa-cross"></i> Spiritualitas Karmel</span>
+            <span class="badge"><i class="fa fa-star"></i> Pancasila</span>
+            <span class="badge"><i class="fa fa-heart"></i> Karakter Mulia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================   FASILITAS   ============================== -->
+  <section class="facilities-section" id="fasilitas">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-eyebrow">Yang Kami Sediakan</div>
+        <h2 class="section-heading">Fasilitas Lengkap &amp; Modern</h2>
+        <p class="section-desc">Kami menyediakan lingkungan yang nyaman dan kondusif untuk mendukung perkembangan akademik dan karakter siswa.</p>
+      </div>
+
+      <div class="facilities-grid">
+        <div class="facility-card" data-aos="fade-up" data-delay="0">
+          <div class="facility-icon-wrap" style="--clr:#7C5C3A"><i class="fa fa-church"></i></div>
+          <h3 class="facility-title">Kapel Doa</h3>
+          <p class="facility-desc">Ruang doa & kapel tersedia untuk menunjang kehidupan rohani siswa setiap hari.</p>
+        </div>
+        <div class="facility-card" data-aos="fade-up" data-delay="100">
+          <div class="facility-icon-wrap" style="--clr:#3A6B7C"><i class="fa fa-graduation-cap"></i></div>
+          <h3 class="facility-title">Ruang Belajar AC</h3>
+          <p class="facility-desc">Ruang belajar ber-AC dan ruang les yang nyaman untuk mendukung prestasi akademik.</p>
+        </div>
+        <div class="facility-card" data-aos="fade-up" data-delay="200">
+          <div class="facility-icon-wrap" style="--clr:#3A7C5A"><i class="fa fa-music"></i></div>
+          <h3 class="facility-title">Ruang Musik</h3>
+          <p class="facility-desc">Tersedia ruang peralatan musik untuk mengembangkan bakat dan minat seni siswa.</p>
+        </div>
+        <div class="facility-card" data-aos="fade-up" data-delay="300">
+          <div class="facility-icon-wrap" style="--clr:#7C3A5E"><i class="fa fa-book-open"></i></div>
+          <h3 class="facility-title">Perpustakaan</h3>
+          <p class="facility-desc">Perpustakaan dengan koleksi buku lengkap untuk mendukung kebutuhan literasi siswa.</p>
+        </div>
+        <div class="facility-card" data-aos="fade-up" data-delay="400">
+          <div class="facility-icon-wrap" style="--clr:#7C6B3A"><i class="fa fa-bed"></i></div>
+          <h3 class="facility-title">Kamar Tidur AC</h3>
+          <p class="facility-desc">Kamar tidur bangsal ber-AC untuk kelas X dan XI, plus kamar pribadi untuk kelas XII.</p>
+        </div>
+        <div class="facility-card" data-aos="fade-up" data-delay="500">
+          <div class="facility-icon-wrap" style="--clr:#3A5E7C"><i class="fa fa-wifi"></i></div>
+          <h3 class="facility-title">WiFi &amp; Utilitas</h3>
+          <p class="facility-desc">Akses WiFi untuk belajar, listrik, dan air bersih tersedia sepanjang waktu.</p>
+        </div>
+        <div class="facility-card" data-aos="fade-up" data-delay="600">
+          <div class="facility-icon-wrap" style="--clr:#5E7C3A"><i class="fa fa-utensils"></i></div>
+          <h3 class="facility-title">Makan 3x Sehari</h3>
+          <p class="facility-desc">Makan tiga kali sehari, cuci pakaian, dan pembersihan ruang umum oleh petugas.</p>
+        </div>
+        <div class="facility-card" data-aos="fade-up" data-delay="700">
+          <div class="facility-icon-wrap" style="--clr:#7C3A3A"><i class="fa fa-tree"></i></div>
+          <h3 class="facility-title">Taman &amp; Gazebo</h3>
+          <p class="facility-desc">Taman hijau dan asri dengan gazebo nyaman untuk bermain dan berdiskusi bersama.</p>
+        </div>
+        <div class="facility-card" data-aos="fade-up" data-delay="800">
+          <div class="facility-icon-wrap" style="--clr:#7C3A6B"><i class="fa fa-kit-medical"></i></div>
+          <h3 class="facility-title">Kamar Kesehatan</h3>
+          <p class="facility-desc">Fasilitas kesehatan dan kamar perawatan tersedia untuk menjaga kesehatan siswa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================   GALLERY   ============================== -->
+  <section class="gallery-section" id="galeri">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-eyebrow">Galeri Foto</div>
+        <h2 class="section-heading">Kehidupan di Asrama Putra</h2>
+        <p class="section-desc">Sekilas pandang suasana asrama putra St. Albertus Malang.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-item--wide" data-aos="zoom-in">
+          <img src="foto/IMG_1401.png"
+               onerror="this.src='https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/IMG_1401.JPG'"
+               alt="Suasana Asrama Putra ST. Albertus" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa fa-expand"></i><p>Suasana Asrama</p></div>
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-delay="100">
+          <img src="foto/IMG_20240830_110452.png"
+               onerror="this.src='https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/putra/IMG_20240830_110452.jpg'"
+               alt="Fasilitas Asrama Putra" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa fa-expand"></i><p>Fasilitas Asrama</p></div>
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-delay="200">
+          <img src="foto/IMG_20240831_084450.png"
+               onerror="this.src='https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/putra/IMG_20240831_084450.jpg'"
+               alt="Kamar Asrama Putra" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa fa-expand"></i><p>Kamar Tidur</p></div>
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-delay="300">
+          <img src="foto/ruang rekreasi kelas XII.png"
+               onerror="this.src='https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/putra/ruang%20rekreasi%20kelas%20XII.jpg'"
+               alt="Ruang Rekreasi Kelas XII" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa fa-expand"></i><p>Ruang Rekreasi Kelas XII</p></div>
+        </div>
+        <div class="gallery-item gallery-item--tall" data-aos="zoom-in" data-delay="150">
+          <img src="foto/IMG_1386.png"
+               onerror="this.src='https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/IMG_1386.JPG'"
+               alt="Lingkungan Asrama" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa fa-expand"></i><p>Lingkungan Asrama</p></div>
+        </div>
+        <div class="gallery-item" data-aos="zoom-in" data-delay="250">
+          <img src="foto/IMG-20240830-WA0019.png"
+               onerror="this.src='https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/putra/IMG-20240830-WA0019.jpg'"
+               alt="Kegiatan Asrama Putra" loading="lazy" />
+          <div class="gallery-overlay"><i class="fa fa-expand"></i><p>Kegiatan Asrama</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Tutup">&times;</button>
+      <button class="lightbox-prev" id="lightbox-prev" aria-label="Sebelumnya">&#8249;</button>
+      <img src="" alt="" class="lightbox-img" id="lightbox-img" />
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+      <button class="lightbox-next" id="lightbox-next" aria-label="Berikutnya">&#8250;</button>
+    </div>
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+  </section>
+
+  <!-- ==============================   PENDAMPINGAN   ============================== -->
+  <section class="companion-section" id="pendamping">
+    <div class="companion-bg"></div>
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-eyebrow light">Pembinaan Karakter</div>
+        <h2 class="section-heading light">Pendampingan Profesional</h2>
+        <p class="section-desc light">Para pembina berpengalaman siap mendampingi perkembangan rohani dan intelektual siswa.</p>
+      </div>
+      <div class="companion-cards">
+        <div class="companion-card" data-aos="fade-up" data-delay="0">
+          <div class="companion-icon"><i class="fa fa-user-tie"></i></div>
+          <h3>Para Romo</h3>
+          <p>Pendampingan rohani dan spiritual dari para imam yang berpengalaman.</p>
+        </div>
+        <div class="companion-card" data-aos="fade-up" data-delay="100">
+          <div class="companion-icon"><i class="fa fa-cross"></i></div>
+          <h3>Para Suster</h3>
+          <p>Pembinaan karakter dan pengawasan keseharian oleh para suster berdedikasi.</p>
+        </div>
+        <div class="companion-card" data-aos="fade-up" data-delay="200">
+          <div class="companion-icon"><i class="fa fa-book-bible"></i></div>
+          <h3>Para Bruder</h3>
+          <p>Bimbingan akademik dan kedisiplinan dari para bruder yang terlatih.</p>
+        </div>
+        <div class="companion-card" data-aos="fade-up" data-delay="300">
+          <div class="companion-icon"><i class="fa fa-people-group"></i></div>
+          <h3>Pembina Awam</h3>
+          <p>Pendampingan dari pembina awam profesional untuk kegiatan ekstra dan sosial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================   INFORMASI PENDAFTARAN   ============================== -->
+  <section class="contact-section" id="pendaftaran">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-eyebrow">Kontak &amp; Lokasi</div>
+        <h2 class="section-heading">Informasi Pendaftaran</h2>
+        <p class="section-desc">Hubungi kami untuk informasi lebih lanjut mengenai pendaftaran asrama putra.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+          <div class="contact-item" id="contact-phone">
+            <div class="contact-icon"><i class="fa fa-phone"></i></div>
+            <div>
+              <span class="contact-label">Telepon / WhatsApp</span>
+              <a href="tel:085334907144" class="contact-value">085334907144</a>
+            </div>
+          </div>
+          <div class="contact-item" id="contact-addr1">
+            <div class="contact-icon"><i class="fa fa-location-dot"></i></div>
+            <div>
+              <span class="contact-label">Alamat Asrama 1</span>
+              <span class="contact-value">Jl. Talang No. 3–5, Malang</span>
+            </div>
+          </div>
+          <div class="contact-item" id="contact-addr2">
+            <div class="contact-icon"><i class="fa fa-location-dot"></i></div>
+            <div>
+              <span class="contact-label">Alamat Asrama 2</span>
+              <span class="contact-value">Jl. Kurinci No. 22, Malang</span>
+            </div>
+          </div>
+          <div class="contact-yayasan">
+            <p class="contact-yayasan-label">Di bawah naungan:</p>
+            <img src="foto/YayasanSanctaMaria.png"
+                 onerror="this.src='https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/YayasanSanctaMaria.png'"
+                 alt="Yayasan Sancta Maria" class="yayasan-logo" />
+          </div>
+        </div>
+
+        <div class="contact-map" data-aos="fade-left">
+          <iframe
+            id="map-frame"
+            title="Peta Lokasi Asrama Putra ST. Albertus Malang"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.856408!2d112.6307!3d-7.9573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6287a47c85f91%3A0x6d6c68e3cd0a8bab!2sJl.+Talang%2C+Kec.+Klojen%2C+Kota+Malang!5e0!3m2!1sid!2sid!4v1702000000000!5m2!1sid!2sid"
+            allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <a href="https://maps.google.com/?q=Jl.+Talang+No.3-5,+Malang" target="_blank" rel="noopener" class="btn btn-primary btn-map">
+            <i class="fa fa-map-location-dot"></i> Buka di Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================   CTA   ============================== -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner" data-aos="zoom-in">
+        <h2>Bergabunglah Bersama Kami</h2>
+        <p>Daftarkan diri Anda ke Asrama Putra ST. Albertus dan rasakan pengalaman bertumbuh bersama komunitas yang penuh kasih.</p>
+        <a href="https://ppdb2025.st-albertus.sch.id/" class="btn btn-primary btn-lg" id="btn-ppdb">Kunjungi Portal PPDB</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================   FOOTER   ============================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="foto/SMADEMPO9.png"
+               onerror="this.src='https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/SMADEMPO9.png'"
+               alt="Logo SMA ST. Albertus" class="footer-logo" />
+          <p class="footer-brand-name">SMA Katolik ST. Albertus</p>
+          <p class="footer-brand-tagline">(DEMPO) Malang</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="https://ppdb2025.st-albertus.sch.id/">Home PPDB</a></li>
+            <li><a href="https://ppdb2025.st-albertus.sch.id/asrama_putra">Asrama Putra</a></li>
+            <li><a href="https://ppdb2025.st-albertus.sch.id/asrama_putri">Asrama Putri</a></li>
+            <li><a href="https://ppdb2025.st-albertus.sch.id/Home.html#sec-f249">Prosedur PPDB</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Kontak</h4>
+          <p><i class="fa fa-phone"></i> 085334907144</p>
+          <p><i class="fa fa-location-dot"></i> Jl. Talang No. 3–5, Malang</p>
+          <p><i class="fa fa-location-dot"></i> Jl. Kurinci No. 22, Malang</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 SMA Katolik ST. Albertus (DEMPO) Malang – Yayasan Sancta Maria. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Kembali ke atas">
+    <i class="fa fa-chevron-up"></i>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
