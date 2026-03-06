@@ -1035,76 +1035,6 @@ button {
 }
 
 /* ====================================================
-   INSTAGRAM SECTION
-   ==================================================== */
-.instagram-section {
-  padding: 100px 0;
-  background: var(--color-white);
-}
-
-.ig-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-bottom: 48px;
-}
-
-.ig-card {
-  position: relative;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  aspect-ratio: 1 / 1;
-  display: block;
-}
-
-.ig-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.ig-card:hover img {
-  transform: scale(1.1);
-}
-
-.ig-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  opacity: 0;
-  transition: opacity var(--transition);
-}
-
-.ig-card:hover .ig-overlay {
-  opacity: 1;
-}
-
-.ig-stat {
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 8px;
-}
-
-.ig-icon-lg {
-  font-size: 2.5rem;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.ig-footer {
-  text-align: center;
-}
-
-/* ====================================================
    CONTACT SECTION
    ==================================================== */
 .contact-section {
@@ -1559,10 +1489,6 @@ a.contact-value:hover {
     min-height: 200px;
   }
 
-  .ig-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .contact-grid {
     grid-template-columns: 1fr;
   }
@@ -1592,10 +1518,6 @@ a.contact-value:hover {
 
   .gallery-item--wide {
     grid-column: span 1;
-  }
-
-  .ig-grid {
-    grid-template-columns: 1fr;
   }
 
   .hero-cta {
