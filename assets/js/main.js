@@ -1,8 +1,26 @@
-/* =========================================
-   main.js – Asrama Putra ST. Albertus
+﻿/* =========================================
+   main.js â€“ Asrama Putra ST. Albertus
    ========================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  /* ---- Hero text entrance animation ---- */
+  const heroContent = document.querySelector(".hero-content");
+  const heroChildren = heroContent.querySelectorAll(".hero-badge, .hero-eyebrow, .hero-title, .hero-motto, .hero-cta");
+  heroChildren.forEach((el, i) => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(40px)";
+    el.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+    el.style.transitionDelay = `${0.3 + i * 0.15}s`;
+  });
+  // Trigger after a short delay
+  setTimeout(() => {
+    heroChildren.forEach(el => {
+      el.style.opacity = "1";
+      el.style.transform = "translateY(0)";
+    });
+  }, 200);
+
   /* ---- Navbar scroll effect ---- */
   const navbar = document.getElementById("navbar");
   const onScroll = () => {
@@ -211,4 +229,134 @@ document.addEventListener("DOMContentLoaded", () => {
     { threshold: 0.4 }
   );
   sections.forEach((s) => sectionObserver.observe(s));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* ---- Stats counter animation ---- */
+  const statCards = document.querySelectorAll(".stat-card");
+  const animateCounter = (el) => {
+    const numberEl = el.querySelector(".stat-number");
+    const targetText = numberEl.getAttribute("data-count");
+    // Only animate pure numbers (skip "2018" or "55+")
+    const isNumeric = /^\d+$/.test(targetText);
+    if (!isNumeric) return;
+    const target = parseInt(targetText, 10);
+    const duration = 2000;
+    const start = performance.now();
+    const step = (now) => {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      numberEl.textContent = Math.floor(eased * target);
+      if (progress < 1) requestAnimationFrame(step);
+      else numberEl.textContent = targetText; // restore original (with "+" etc)
+    };
+    requestAnimationFrame(step);
+  };
+
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  statCards.forEach(card => statsObserver.observe(card));
+
+  /* ---- Dark mode toggle ---- */
+  const themeToggle = document.getElementById("theme-toggle");
+  const html = document.documentElement;
+  const themeIcon = themeToggle.querySelector("i");
+
+  const getSystemTheme = () =>
+    window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+
+  const savedTheme = localStorage.getItem("theme");
+  const currentTheme = savedTheme || getSystemTheme();
+  html.setAttribute("data-theme", currentTheme);
+  updateThemeIcon(currentTheme);
+
+  function updateThemeIcon(theme) {
+    themeIcon.className = theme === "dark" ? "fa fa-sun" : "fa fa-moon";
+  }
+
+  themeToggle.addEventListener("click", () => {
+    const next = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    html.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+    updateThemeIcon(next);
+  });
+
+  /* ---- FAQ accordion ---- */
+  document.querySelectorAll(".faq-question").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const expanded = btn.getAttribute("aria-expanded") === "true";
+      // Close all others
+      document.querySelectorAll(".faq-question").forEach((other) => {
+        other.setAttribute("aria-expanded", "false");
+        other.nextElementSibling.classList.remove("open");
+      });
+      // Open clicked (if not already open)
+      if (!expanded) {
+        btn.setAttribute("aria-expanded", "true");
+        btn.nextElementSibling.classList.add("open");
+      }
+    });
+  });
+
+  /* ---- Form submission ---- */
+  const daftarForm = document.getElementById("daftar-form");
+  if (daftarForm) {
+    daftarForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const btn = daftarForm.querySelector("button[type=submit]");
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Mengirim...';
+      btn.disabled = true;
+
+      try {
+        const formData = new FormData(daftarForm);
+        const res = await fetch(daftarForm.action, {
+          method: "POST",
+          body: formData,
+          headers: { Accept: "application/json" },
+        });
+
+        if (res.ok) {
+          btn.innerHTML = '<i class="fa fa-check"></i> Terkirim!';
+          btn.style.background = "#3A7C5A";
+          daftarForm.reset();
+          setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.style.background = "";
+            btn.disabled = false;
+          }, 3000);
+        } else {
+          throw new Error("Gagal mengirim");
+        }
+      } catch (err) {
+        btn.innerHTML = '<i class="fa fa-exclamation-triangle"></i> Gagal, coba lagi';
+        btn.style.background = "#C0392B";
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.style.background = "";
+          btn.disabled = false;
+        }, 3000);
+        // Fallback: open WhatsApp with form data
+        const nama = document.getElementById("form-nama").value;
+        const telp = document.getElementById("form-telp").value;
+        const ortu = document.getElementById("form-ortu").value;
+        const asal = document.getElementById("form-asal").value;
+        const pesan = document.getElementById("form-pesan").value;
+        const waMsg = encodeURIComponent(
+          `Halo, saya ingin mendaftar Asrama Putra St. Albertus:\n\nNama: ${nama}\nOrtu/Wali: ${ortu}\nTelepon: ${telp}\nAsal: ${asal}\nPesan: ${pesan}`
+        );
+        window.open(`https://wa.me/6281237542913?text=${waMsg}`, "_blank");
+      }
+    });
+  }
 });

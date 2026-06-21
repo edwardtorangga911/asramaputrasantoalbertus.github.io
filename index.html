@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme="light">
 
 <head>
   <meta charset="UTF-8" />
@@ -10,6 +10,16 @@
   <meta property="og:title" content="Asrama Putra Santo Albertus Malang" />
   <meta property="og:description"
     content="Belajar, berdoa, bersaudara dan melayani segiat-giatnya untuk kemuliaan Tuhan." />
+  <meta property="og:image" content="https://asramaputrasantoalbstus.github.io/foto/logo-asrama.png" />
+  <meta property="og:url" content="https://asramaputrasantoalbstus.github.io" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Asrama Putra Santo Albertus Malang" />
+  <meta name="twitter:description"
+    content="Belajar, berdoa, bersaudara dan melayani segiat-giatnya untuk kemuliaan Tuhan." />
+  <meta name="twitter:image" content="https://asramaputrasantoalbstus.github.io/foto/logo-asrama.png" />
+  <link rel="canonical" href="https://asramaputrasantoalbstus.github.io" />
+  <link rel="icon" type="image/png" href="foto/logo-asrama.png" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,6 +30,31 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Asrama Putra Santo Albertus Malang",
+    "description": "Belajar, berdoa, bersaudara dan melayani segiat-giatnya untuk kemuliaan Tuhan.",
+    "url": "https://asramaputrasantoalbstus.github.io",
+    "logo": "https://asramaputrasantoalbstus.github.io/foto/logo-asrama.png",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Yayasan Sancta Maria"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jl. Talang No.3, Oro-oro Dowo",
+      "addressLocality": "Kota Malang",
+      "addressRegion": "Jawa Timur",
+      "postalCode": "65119",
+      "addressCountry": "ID"
+    },
+    "telephone": "+6281237542913",
+    "sameAs": ["https://www.instagram.com/asrama_st.albertus/"]
+  }
+  </script>
 </head>
 
 <body>
@@ -42,11 +77,17 @@
       <nav class="nav-menu" id="nav-menu">
         <a href="#hero" class="nav-link active">Beranda</a>
         <a href="#visi" class="nav-link">Tentang</a>
+        <a href="#statistik" class="nav-link">Statistik</a>
         <a href="#fasilitas" class="nav-link">Fasilitas</a>
         <a href="#galeri" class="nav-link">Galeri</a>
         <a href="#pendamping" class="nav-link">Pendampingan</a>
+        <a href="#testimoni" class="nav-link">Testimoni</a>
+        <a href="#faq" class="nav-link">FAQ</a>
         <a href="#instagram" class="nav-link">Update</a>
         <a href="#pendaftaran" class="nav-link nav-link-outlined">Kontak</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Mode Gelap/Terang">
+          <i class="fa fa-moon"></i>
+        </button>
       </nav>
     </div>
   </header>
@@ -55,13 +96,13 @@
   <section class="hero" id="hero">
     <div class="hero-slides" id="hero-slides">
       <div class="hero-slide active"
-        style="background-image: url('foto/IMG_1401.png'), url('https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/IMG_1401.JPG')">
+        style="background-image: url('foto/IMG_1401.png')">
       </div>
       <div class="hero-slide"
-        style="background-image: url('foto/IMG_20240830_110452.png'), url('https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/putra/IMG_20240830_110452.jpg')">
+        style="background-image: url('foto/IMG_20240830_110452.png')">
       </div>
       <div class="hero-slide"
-        style="background-image: url('foto/IMG_1386.png'), url('https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/IMG_1386.JPG')">
+        style="background-image: url('foto/IMG_1386.png')">
       </div>
     </div>
     <div class="hero-overlay"></div>
@@ -122,6 +163,39 @@
             <span class="badge"><i class="fa fa-star"></i> Pancasila</span>
             <span class="badge"><i class="fa fa-heart"></i> Karakter Mulia</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================   STATISTIK   ============================== -->
+  <section class="stats-section" id="statistik">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-eyebrow">Dalam Angka</div>
+        <h2 class="section-heading">Statistik Asrama</h2>
+        <p class="section-desc">Berdiri sejak tahun 2018, kami terus bertumbuh dalam pelayanan pendampingan kaum muda.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card" data-aos="fade-up" data-delay="0">
+          <div class="stat-icon"><i class="fa fa-calendar-check"></i></div>
+          <div class="stat-number" data-count="2018">2018</div>
+          <div class="stat-label">Tahun Berdiri</div>
+        </div>
+        <div class="stat-card" data-aos="fade-up" data-delay="100">
+          <div class="stat-icon"><i class="fa fa-users"></i></div>
+          <div class="stat-number" data-count="55">55+</div>
+          <div class="stat-label">Siswa Aktif</div>
+        </div>
+        <div class="stat-card" data-aos="fade-up" data-delay="200">
+          <div class="stat-icon"><i class="fa fa-user-graduate"></i></div>
+          <div class="stat-number" data-count="80">80+</div>
+          <div class="stat-label">Alumni Berhasil</div>
+        </div>
+        <div class="stat-card" data-aos="fade-up" data-delay="300">
+          <div class="stat-icon"><i class="fa fa-chalkboard-user"></i></div>
+          <div class="stat-number" data-count="6">6</div>
+          <div class="stat-label">Pendamping</div>
         </div>
       </div>
     </div>
@@ -201,7 +275,7 @@
       <div class="gallery-grid">
         <div class="gallery-item gallery-item--wide" data-aos="zoom-in">
           <img src="foto/IMG_1401.png"
-            onerror="this.src='https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/IMG_1401.JPG'"
+           
             alt="Suasana Asrama Putra ST. Albertus" loading="lazy" />
           <div class="gallery-overlay"><i class="fa fa-expand"></i>
             <p>Suasana Asrama</p>
@@ -209,7 +283,7 @@
         </div>
         <div class="gallery-item" data-aos="zoom-in" data-delay="100">
           <img src="foto/IMG_20240830_110452.png"
-            onerror="this.src='https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/putra/IMG_20240830_110452.jpg'"
+           
             alt="Fasilitas Asrama Putra" loading="lazy" />
           <div class="gallery-overlay"><i class="fa fa-expand"></i>
             <p>Fasilitas Asrama</p>
@@ -217,7 +291,7 @@
         </div>
         <div class="gallery-item" data-aos="zoom-in" data-delay="200">
           <img src="foto/IMG_20240831_084450.png"
-            onerror="this.src='https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/putra/IMG_20240831_084450.jpg'"
+           
             alt="Kamar Asrama Putra" loading="lazy" />
           <div class="gallery-overlay"><i class="fa fa-expand"></i>
             <p>Kamar Tidur</p>
@@ -225,7 +299,7 @@
         </div>
         <div class="gallery-item" data-aos="zoom-in" data-delay="300">
           <img src="foto/ruang rekreasi kelas XII.png"
-            onerror="this.src='https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/putra/ruang%20rekreasi%20kelas%20XII.jpg'"
+           
             alt="Ruang Rekreasi Kelas XII" loading="lazy" />
           <div class="gallery-overlay"><i class="fa fa-expand"></i>
             <p>Ruang Rekreasi Kelas XII</p>
@@ -233,7 +307,7 @@
         </div>
         <div class="gallery-item gallery-item--tall" data-aos="zoom-in" data-delay="150">
           <img src="foto/IMG_1386.png"
-            onerror="this.src='https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/IMG_1386.JPG'"
+           
             alt="Lingkungan Asrama" loading="lazy" />
           <div class="gallery-overlay"><i class="fa fa-expand"></i>
             <p>Lingkungan Asrama</p>
@@ -241,7 +315,7 @@
         </div>
         <div class="gallery-item" data-aos="zoom-in" data-delay="250">
           <img src="foto/IMG-20240830-WA0019.png"
-            onerror="this.src='https://cdn.st-albertus.sch.id/ppdb2024/frontend/images/putra/IMG-20240830-WA0019.jpg'"
+           
             alt="Kegiatan Asrama Putra" loading="lazy" />
           <div class="gallery-overlay"><i class="fa fa-expand"></i>
             <p>Kegiatan Asrama</p>
@@ -296,6 +370,110 @@
     </div>
   </section>
 
+  <!-- ==============================   TESTIMONI   ============================== -->
+  <section class="testimoni-section" id="testimoni">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-eyebrow">Apa Kata Mereka</div>
+        <h2 class="section-heading">Testimoni</h2>
+        <p class="section-desc">Cerita nyata dari para siswa dan alumni yang pernah merasakan kehidupan di Asrama Putra St. Albertus.</p>
+      </div>
+      <div class="testimoni-grid">
+        <div class="testimoni-card" data-aos="fade-up" data-delay="0">
+          <div class="testimoni-stars">★★★★★</div>
+          <p class="testimoni-text">"Selama di asrama, saya belajar banyak tentang disiplin dan tanggung jawab. Para pembina selalu sabar membimbing kami."</p>
+          <div class="testimoni-author">
+            <div class="testimoni-avatar"><i class="fa fa-user-graduate"></i></div>
+            <div>
+              <p class="testimoni-name">Andi P.</p>
+              <p class="testimoni-role">Alumni 2023</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimoni-card" data-aos="fade-up" data-delay="100">
+          <div class="testimoni-stars">★★★★★</div>
+          <p class="testimoni-text">"Fasilitas lengkap dan lingkungan yang nyaman membuat saya bisa fokus belajar. Makanan juga enak setiap hari!"</p>
+          <div class="testimoni-author">
+            <div class="testimoni-avatar"><i class="fa fa-user-graduate"></i></div>
+            <div>
+              <p class="testimoni-name">Rizal S.</p>
+              <p class="testimoni-role">Kelas XII</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimoni-card" data-aos="fade-up" data-delay="200">
+          <div class="testimoni-stars">★★★★★</div>
+          <p class="testimoni-text">"Kehidupan rohani di asrama sangat mendalam. Saya diajarkan untuk berdoa dan melayani, bukan hanya belajar akademik."</p>
+          <div class="testimoni-author">
+            <div class="testimoni-avatar"><i class="fa fa-user-graduate"></i></div>
+            <div>
+              <p class="testimoni-name">David K.</p>
+              <p class="testimoni-role">Alumni 2022</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================   FAQ   ============================== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-eyebrow">Pertanyaan Umum</div>
+        <h2 class="section-heading">FAQ</h2>
+        <p class="section-desc">Jawaban atas pertanyaan yang paling sering ditanyakan seputar pendaftaran dan kehidupan asrama.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-question" aria-expanded="false">
+            <span>Siapa saja yang boleh mendaftar di Asrama Putra St. Albertus?</span>
+            <i class="fa fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Asrama Putra St. Albertus terbuka untuk siswa putra SMA Katolik St. Albertus Malang dari kelas X hingga XII. Pendaftaran dibuka setiap tahun ajaran baru.</p>
+          </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-question" aria-expanded="false">
+            <span>Berapa biaya tinggal di asrama?</span>
+            <i class="fa fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Informasi biaya dapat berubah setiap tahun ajaran. Silakan hubungi kontak yang tertera untuk informasi biaya terbaru dan ketentuan pembayaran.</p>
+          </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-question" aria-expanded="false">
+            <span>Apakah ada aturan khusus yang harus dipatuhi?</span>
+            <i class="fa fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Ya, setiap siswa wajib mematuhi tata tertib asrama yang mencakup jadwal belajar, jam malam, ibadah, dan kegiatan bersama. Aturan dibuat untuk membentuk karakter disiplin dan tanggung jawab.</p>
+          </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-question" aria-expanded="false">
+            <span>Apakah siswa boleh membawa gadget?</span>
+            <i class="fa fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Penggunaan gadget diatur secara ketat. Siswa diperbolehkan membawa ponsel namun hanya dapat digunakan pada waktu tertentu yang sudah ditentukan untuk mendukung fokus belajar.</p>
+          </div>
+        </div>
+        <div class="faq-item" data-aos="fade-up">
+          <button class="faq-question" aria-expanded="false">
+            <span>Bagaimana prosedur pendaftaran?</span>
+            <i class="fa fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Prosedur pendaftaran dimulai dengan menghubungi nomor yang tertera, mengisi formulir, dan mengikuti wawancara dengan pembina asrama. Pendaftar yang diterima akan diinformasikan lebih lanjut melalui WhatsApp atau telepon.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ==============================   INSTAGRAM FEED   ============================== -->
   <section class="instagram-section" id="instagram">
     <div class="container">
@@ -310,7 +488,7 @@
       <div class="ig-grid">
         <a href="https://www.instagram.com/asrama_st.albertus/" target="_blank" class="ig-card" data-aos="fade-up"
           data-delay="0">
-          <img src="foto/IMG-20240830-WA0019.png" onerror="this.src='foto/IMG-20240830-WA0019.jpg'"
+          <img src="foto/IMG-20240830-WA0019.png"
             alt="Postingan Instagram Asrama 1" loading="lazy" />
           <div class="ig-overlay">
             <i class="fa-brands fa-instagram ig-icon-lg"></i>
@@ -319,7 +497,7 @@
         </a>
         <a href="https://www.instagram.com/asrama_st.albertus/" target="_blank" class="ig-card" data-aos="fade-up"
           data-delay="100">
-          <img src="foto/IMG_1401.png" onerror="this.src='foto/IMG_1401.jpg'" alt="Postingan Instagram Asrama 2"
+          <img src="foto/IMG_1401.png" alt="Postingan Instagram Asrama 2"
             loading="lazy" />
           <div class="ig-overlay">
             <i class="fa-brands fa-instagram ig-icon-lg"></i>
@@ -328,7 +506,7 @@
         </a>
         <a href="https://www.instagram.com/asrama_st.albertus/" target="_blank" class="ig-card" data-aos="fade-up"
           data-delay="200">
-          <img src="foto/IMG_20240830_110452.png" onerror="this.src='foto/IMG_20240830_110452.jpg'"
+          <img src="foto/IMG_20240830_110452.png"
             alt="Postingan Instagram Asrama 3" loading="lazy" />
           <div class="ig-overlay">
             <i class="fa-brands fa-instagram ig-icon-lg"></i>
@@ -352,7 +530,7 @@
       <div class="section-header" data-aos="fade-up">
         <div class="section-eyebrow">Kontak &amp; Lokasi</div>
         <h2 class="section-heading">Informasi Pendaftaran</h2>
-        <p class="section-desc">Hubungi kami untuk informasi lebih lanjut mengenai pendaftaran asrama putra.</p>
+        <p class="section-desc">Hubungi kami atau isi formulir di bawah ini untuk informasi lebih lanjut mengenai pendaftaran asrama putra.</p>
       </div>
 
       <div class="contact-grid">
@@ -363,14 +541,19 @@
               <span class="contact-label">Telepon / WhatsApp</span>
               <a href="tel:081237542913" class="contact-value">081237542913</a>
             </div>
-           
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div>
+              <span class="contact-label">Chat WhatsApp</span>
+              <a href="https://wa.me/6281237542913?text=Halo,%20saya%20ingin%20bertanya%20tentang%20pendaftaran%20Asrama%20Putra%20St.%20Albertus" target="_blank" class="contact-value">Chat Langsung via WA</a>
+            </div>
           </div>
           <div class="contact-item" id="contact-addr1">
             <div class="contact-icon"><i class="fa fa-location-dot"></i></div>
             <div>
               <span class="contact-label">Alamat Asrama</span>
-              <span class="contact-value">Jl. Talang No.3, Oro-oro Dowo, Kec. Klojen, Kota Malang, Jawa Timur
-                65119</span>
+              <span class="contact-value">Jl. Talang No.3, Oro-oro Dowo, Kec. Klojen, Kota Malang, Jawa Timur 65119</span>
             </div>
           </div>
           <div class="contact-yayasan">
@@ -379,16 +562,49 @@
           </div>
         </div>
 
-        <div class="contact-map" data-aos="fade-left">
-          <iframe id="map-frame" title="Peta Lokasi Asrama Putra ST. Albertus Malang"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.856408!2d112.6307!3d-7.9573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6287a47c85f91%3A0x6d6c68e3cd0a8bab!2sJl.+Talang%2C+Kec.+Klojen%2C+Kota+Malang!5e0!3m2!1sid!2sid!4v1702000000000!5m2!1sid!2sid"
-            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-          <a href="https://maps.google.com/?q=Jl.+Talang+No.3,+Oro-oro+Dowo,+Kec.+Klojen,+Kota+Malang,+Jawa+Timur+65119"
-            target="_blank" rel="noopener" class="btn btn-primary btn-map">
-            <i class="fa fa-map-location-dot"></i> Buka di Google Maps
-          </a>
+        <div class="contact-form-wrapper" data-aos="fade-left">
+          <form class="daftar-form" id="daftar-form" action="https://formspree.io/f/xwpvzopl" method="POST">
+            <h3 class="form-title">Formulir Pendaftaran</h3>
+            <p class="form-desc">Isi data berikut dan tim kami akan menghubungi Anda.</p>
+            <div class="form-group">
+              <label for="form-nama">Nama Lengkap</label>
+              <input type="text" id="form-nama" name="nama" placeholder="Nama calon siswa" required />
+            </div>
+            <div class="form-group">
+              <label for="form-ortu">Nama Orang Tua / Wali</label>
+              <input type="text" id="form-ortu" name="orangtua" placeholder="Nama orang tua atau wali" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-telp">Nomor WhatsApp</label>
+                <input type="tel" id="form-telp" name="telepon" placeholder="0812-xxxx-xxxx" required />
+              </div>
+              <div class="form-group">
+                <label for="form-asal">Asal Sekolah / Kota</label>
+                <input type="text" id="form-asal" name="asal" placeholder="Asal sekolah atau kota" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="form-pesan">Pesan (opsional)</label>
+              <textarea id="form-pesan" name="pesan" rows="3" placeholder="Pertanyaan atau informasi tambahan..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fa fa-paper-plane"></i> Kirim Pendaftaran
+            </button>
+            <p class="form-note">Kami akan merespons melalui WhatsApp dalam 1×24 jam.</p>
+          </form>
         </div>
+      </div>
+
+      <div class="contact-map" data-aos="fade-up" style="margin-top: 48px;">
+        <iframe id="map-frame" title="Peta Lokasi Asrama Putra ST. Albertus Malang"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.856408!2d112.6307!3d-7.9573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6287a47c85f91%3A0x6d6c68e3cd0a8bab!2sJl.+Talang%2C+Kec.+Klojen%2C+Kota+Malang!5e0!3m2!1sid!2sid!4v1702000000000!5m2!1sid!2sid"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <a href="https://maps.google.com/?q=Jl.+Talang+No.3,+Oro-oro+Dowo,+Kec.+Klojen,+Kota+Malang,+Jawa+Timur+65119"
+          target="_blank" rel="noopener" class="btn btn-primary btn-map">
+          <i class="fa fa-map-location-dot"></i> Buka di Google Maps
+        </a>
       </div>
     </div>
   </section>
@@ -420,6 +636,8 @@
             <li><a href="#hero">Beranda</a></li>
             <li><a href="#fasilitas">Fasilitas</a></li>
             <li><a href="#galeri">Galeri</a></li>
+            <li><a href="#testimoni">Testimoni</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="#pendaftaran">Kontak</a></li>
           </ul>
         </div>
@@ -432,7 +650,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Asrama Putra Santo Albertus Malang – Yayasan Sancta Maria. All rights reserved.</p>
+        <p>&copy; 2026 Asrama Putra Santo Albertus Malang – Yayasan Sancta Maria. All rights reserved.</p>
       </div>
     </div>
   </footer>
